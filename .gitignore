@@ -1,3 +1,4 @@
 *.lisp~
 *.wx64fsl
 *.asd~
+*.md~
