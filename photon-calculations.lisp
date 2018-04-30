@@ -21,8 +21,9 @@
   "Number of photons/second
 
 Arguments and values:
-POWER - beam power in Watt
-WAVELENGTH - light wavelength in Meter"
+
+POWER: beam power in Watt
+WAVELENGTH: light wavelength in Meter"
   (let ((E-ph (photon-energy wavelength)))
     (/ power E-ph)))
 
@@ -31,9 +32,12 @@ WAVELENGTH - light wavelength in Meter"
   "Photon current
 
 Arguments and values:
-POWER - beam power in Watt
-WAVELENGTH - light wavelength in Meter
-PHOTON-CURRENT - Ampere
+
+POWER: beam power in Watt
+WAVELENGTH: light wavelength in Meter
+PHOTON-CURRENT: Ampere
+
+Notes: 
 
 For verification, use \"Calculator for Photodiodes\" on https://www.rp-photonics.com/photodiodes.html
 "
@@ -44,8 +48,9 @@ For verification, use \"Calculator for Photodiodes\" on https://www.rp-photonics
   "Number of photons in a beam
 
 Arguments and Values:
-BEAM-ENERGY - Beam energy in Joules
-WAVELENGTH - Photon wavelength in Meter"
+
+beam-energy: Beam energy in Joule, a real number
+wavelength: Photon wavelength in Meter, a real number"
   (let ((E-ph (photon-energy wavelength)))
     (/ beam-energy E-ph)))
 
