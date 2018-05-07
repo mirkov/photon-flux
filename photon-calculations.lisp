@@ -20,10 +20,10 @@
 (defun photon-rate (power wavelength)
   "Number of photons/second
 
-Arguments and values:
+Arguments and Values:
 
-POWER: beam power in Watt
-WAVELENGTH: light wavelength in Meter"
+POWER : beam power in Watt
+WAVELENGTH : light wavelength in Meter"
   (let ((E-ph (photon-energy wavelength)))
     (/ power E-ph)))
 
@@ -31,11 +31,11 @@ WAVELENGTH: light wavelength in Meter"
 (defun photon-current (power wavelength)
   "Photon current
 
-Arguments and values:
+Arguments and Values:
 
-POWER: beam power in Watt
-WAVELENGTH: light wavelength in Meter
-PHOTON-CURRENT: Ampere
+POWER : beam power in Watt
+WAVELENGTH : light wavelength in Meter
+PHOTON-CURRENT : Ampere
 
 Notes: 
 
@@ -49,8 +49,8 @@ For verification, use \"Calculator for Photodiodes\" on https://www.rp-photonics
 
 Arguments and Values:
 
-beam-energy: Beam energy in Joule, a real number
-wavelength: Photon wavelength in Meter, a real number"
+beam-energy : Beam energy in Joule, a real number
+wavelength : Photon wavelength in Meter, a real number"
   (let ((E-ph (photon-energy wavelength)))
     (/ beam-energy E-ph)))
 
@@ -66,7 +66,7 @@ wavelength: Photon wavelength in Meter, a real number"
 
 @export
 (defun photon-energy/eV (wavelength)
-  "Calculate photon energy as function of wavelength
+"Calculate photon energy as function of wavelength
 
 Syntax:
 
@@ -74,9 +74,9 @@ photon-energy/eV wavelength -> energy/eV energy/Joule
 
 Arguments and Values:
 
-wavelength: the wavelength in meters, a real number
-energy/eV: energy in units of eV, a real number
-energy/Joule: energy in units of Joule, a real number"
+wavelength : the wavelength in meters, a real number
+energy/eV : energy in units of eV, a real number
+  energy/Joule : energy in units of Joule, a real number"
   (let* ((J (/ (* +h+ +c+)
 	       wavelength))
 	 (eV (/ J +q+)))
